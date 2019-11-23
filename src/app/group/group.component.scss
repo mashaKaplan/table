@@ -1,0 +1,13 @@
+.groupTotal{
+  color: red;
+  display: flex;
+  font-weight: bolder;
+  border-bottom: 1px solid gray;
+
+  .totalItem{
+    margin: 0px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+  }
+
+}

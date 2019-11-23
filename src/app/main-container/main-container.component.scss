@@ -1,0 +1,33 @@
+.mainContainer{
+  direction: rtl;
+  width: 50vw;
+  margin: 1vw 25vw;
+  justify-items: center;
+  font-size: 1rem;
+  font-family: Calibri;
+  @media (max-width: 650px){
+    width: 80vw;
+    margin: 1vw 10vw;
+  }
+}
+.row {
+  display: flex;
+  border: 1px solid gray;
+  border-bottom: unset;
+  .headerItem{
+    background-color: cornflowerblue;
+    border: 1px solid antiquewhite;
+    padding: 4% 0%;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    margin: 0px;
+  }
+  .footerItem{
+    background-color: bisque;
+    color: darkblue;
+    font-weight: bold;
+    margin: 0px;
+  }
+}
+

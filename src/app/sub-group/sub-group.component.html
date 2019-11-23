@@ -1,0 +1,9 @@
+<div *ngFor="let paper of subGroup.papers" class="row">
+  <p class="id item">{{paper.id}}</p>
+  <p class="name item">{{paper.title}}</p>
+  <p class="amount item">{{paper.amount | number:'.2'}}</p>
+</div>
+<div class="groupTotal row">
+  <p class="totalItem title">{{subGroup.subGroupTitle}}:</p>
+  <p class="totalItem sum">{{subGroupTotal | number:'.2'}}</p>
+</div>

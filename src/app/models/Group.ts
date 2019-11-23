@@ -1,6 +1,6 @@
-import {PapersBatch} from './batch';
+import {SubGroup} from './SubGroup';
 
-export class BatchType {
-  typeTitle: string;
-  batches: PapersBatch[];
+export class Group {
+  groupTitle: string;
+  subGroups: SubGroup[];
 }

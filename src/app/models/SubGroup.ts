@@ -1,6 +1,6 @@
 import {Paper} from './Paper';
 
-export class PapersBatch {
+export class SubGroup {
   papers: Paper[];
-  batchesTitle: string;
+  subGroupTitle: string;
 }

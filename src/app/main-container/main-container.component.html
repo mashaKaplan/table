@@ -1,0 +1,14 @@
+<div class="mainContainer">
+<main class="row">
+  <p class="headerItem id">מס נייר</p>
+  <p class="headerItem name">שמ נייר</p>
+  <p class="headerItem amount">כמות</p>
+</main>
+<div *ngFor="let group of papersData">
+  <app-group [group]="group"></app-group>
+</div>
+<footer class="row">
+  <p class="footerItem title">סה''כ כללי</p>
+  <p class="footerItem sum">{{total | number:'.2'}}</p>
+</footer>
+</div>

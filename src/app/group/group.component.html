@@ -1,0 +1,7 @@
+<div *ngFor="let subGroup of group.subGroups">
+  <app-sub-group [subGroup]="subGroup"></app-sub-group>
+</div>
+<div class="groupTotal">
+  <p class="totalItem title">{{group.groupTitle}}:</p>
+  <p class="totalItem sum">{{groupTotal | number:'.2'}}</p>
+</div>
