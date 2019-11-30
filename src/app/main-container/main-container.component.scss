@@ -5,7 +5,7 @@
   justify-items: center;
   font-size: 1rem;
   font-family: Calibri;
-  @media (max-width: 650px){
+  @media (max-width: 750px){
     width: 80vw;
     margin: 1vw 10vw;
   }
@@ -30,4 +30,11 @@
     margin: 0px;
   }
 }
-
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  button{
+    background-color: lightblue;
+  }
+}

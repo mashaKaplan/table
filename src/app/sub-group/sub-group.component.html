@@ -1,7 +1,12 @@
-<div *ngFor="let paper of subGroup.papers" class="row">
+<div *ngFor="let paper of subGroup.papers; let paperIdx = index" class="row">
   <p class="id item">{{paper.id}}</p>
   <p class="name item">{{paper.title}}</p>
-  <p class="amount item">{{paper.amount | number:'.2'}}</p>
+  <p class="amount item">
+    <span>{{paper.amount | number:'.2'}}</span>
+    <span class="remove">
+      <img src="../../assets/icons/remove.svg" alt="remove" (click)="removeItem(paperIdx)">
+    </span>
+  </p>
 </div>
 <div class="groupTotal row">
   <p class="totalItem title">{{subGroup.subGroupTitle}}:</p>

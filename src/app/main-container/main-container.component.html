@@ -4,11 +4,15 @@
   <p class="headerItem name">שמ נייר</p>
   <p class="headerItem amount">כמות</p>
 </main>
-<div *ngFor="let group of papersData">
-  <app-group [group]="group"></app-group>
+<div *ngFor="let group of papersData; let groupIndex=index">
+  <app-group [group]="group" (removePaper)="removePaper($event, groupIndex)" [groupTotal]="calculateGroupTotal(groupIndex)"></app-group>
 </div>
 <footer class="row">
   <p class="footerItem title">סה''כ כללי</p>
   <p class="footerItem sum">{{total | number:'.2'}}</p>
 </footer>
+<div class="buttons">
+  <button (click)="sortById()">Sort by id</button>
+  <button (click)="sortByAmount()">Sort by amount</button>
+</div>
 </div>

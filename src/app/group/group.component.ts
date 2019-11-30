@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Group} from '../models/Group';
 
 @Component({
@@ -6,14 +6,18 @@ import {Group} from '../models/Group';
   templateUrl: './group.component.html',
   styleUrls: ['../app.component.scss', './group.component.scss']
 })
-export class GroupComponent implements OnInit {
+export class GroupComponent {
   @Input() group: Group;
-  groupTotal: number;
+  @Input() groupTotal: number;
+  @Output() removePaper: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
-  ngOnInit() {
-    this.groupTotal = this.group.subGroups.reduce((sum, subGroup) => (sum + subGroup.papers
-      .reduce((subSum, paper) => (subSum + paper.amount), 0)), 0);
+  removeItem(paperIdx: number, subGroupIdx: number) {
+    this.removePaper.emit({paperIdx, subGroupIdx});
+  }
+
+  calculateSubGroupTotal(subGroupIdx: number): number {
+    return this.group.subGroups[subGroupIdx].papers.reduce((sum, paper) => (sum + paper.amount), 0);
   }
 
 }

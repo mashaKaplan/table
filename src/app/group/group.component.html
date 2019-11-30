@@ -1,5 +1,5 @@
-<div *ngFor="let subGroup of group.subGroups">
-  <app-sub-group [subGroup]="subGroup"></app-sub-group>
+<div *ngFor="let subGroup of group.subGroups; let subGroupIdx=index">
+  <app-sub-group [subGroup]="subGroup" [subGroupTotal]="calculateSubGroupTotal(subGroupIdx)" (removePaper)="removeItem($event, subGroupIdx)"></app-sub-group>
 </div>
 <div class="groupTotal">
   <p class="totalItem title">{{group.groupTitle}}:</p>
